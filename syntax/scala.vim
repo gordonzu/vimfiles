@@ -36,6 +36,7 @@ syn keyword scalaVar var nextgroup=scalaVarName skipwhite
 syn keyword scalaClass class nextgroup=scalaClassName skipwhite
 syn keyword scalaObject object nextgroup=scalaClassName skipwhite
 syn keyword scalaTrait trait nextgroup=scalaClassName skipwhite
+syn keyword scalaFuture future nextgroup=scalaKeyword skipwhite
 syn match scalaDefName "[^ =:;([]\+" contained nextgroup=scalaDefSpecializer skipwhite
 syn match scalaValName "[^ =:;([]\+" contained
 syn match scalaVarName "[^ =:;([]\+" contained 
@@ -100,6 +101,7 @@ syn sync fromstart
 
 " map Scala groups to standard groups
 hi link scalaKeyword Keyword
+hi link scalaFuture Keyword
 hi link scalaPackage Include
 hi link scalaImport Include
 hi link scalaBoolean Boolean
