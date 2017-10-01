@@ -289,8 +289,13 @@ fun! s:X(group, fg, bg, attr, lcfg, lcbg)
 endfun
 " }}}
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" background
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call s:X("Normal","e8e8d3","151515","","White","")
+"call s:X("Normal","e8e8d3","000000","","White","")
 set background=dark
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 if !exists("g:jellybeans_use_lowcolor_black") || g:jellybeans_use_lowcolor_black
     let s:termBlack = "Black"
@@ -315,7 +320,13 @@ endif
 call s:X("Visual","","404040","","",s:termBlack)
 call s:X("Cursor","","b0d0f0","","","")
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" line numbers
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call s:X("LineNr","605958","151515","none",s:termBlack,"")
+"call s:X("LineNr","605958","000000","none",s:termBlack,"")
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 call s:X("Comment","888888","","italic","Grey","")
 call s:X("Todo","808080","","bold","White",s:termBlack)
 
@@ -338,9 +349,9 @@ call s:X("Delimiter","668799","","","Grey","")
 call s:X("String","99ad6a","","","Green","")
 call s:X("StringDelimiter","556633","","","DarkGreen","")
 
-call s:X("Identifier","c6b6ee","","","LightCyan","")
+call s:X("Identifier","c6b6ee","","italic","LightCyan","")
 call s:X("Structure","8fbfdc","","","LightCyan","")
-call s:X("Function","fad07a","","","Yellow","")
+call s:X("Function","fad07a","","italic","Yellow","")
 call s:X("Statement","8197bf","","","DarkBlue","")
 call s:X("PreProc","8fbfdc","","","LightBlue","")
 
@@ -489,3 +500,7 @@ delf s:grey_color
 delf s:grey_level
 delf s:grey_number
 " }}}
+"
+"let g:jellybeans_overrides = {
+"\    'background': { 'ctermbg': 'none', '256ctermbg': 'none' },
+"\}
