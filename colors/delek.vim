@@ -19,8 +19,11 @@ hi Visual term=reverse cterm=reverse gui=reverse guifg=Grey guibg=fg
 hi VisualNOS term=underline,bold cterm=underline,bold gui=underline,bold
 hi DiffText term=reverse cterm=bold ctermbg=238 
 "hi DiffText term=reverse cterm=bold ctermbg=Red gui=bold guibg=Red
-hi Cursor guibg=Green guifg=NONE
-hi lCursor guibg=Cyan guifg=NONE
+"hi Cursor guibg=Green guifg=NONE
+"hi lCursor guibg=Cyan guifg=NONE
+hi Cursor guibg=gray guifg=NONE
+hi lCursor guibg=black guifg=NONE
+
 hi Directory term=bold ctermfg=DarkBlue guifg=Blue
 hi LineNr term=underline ctermfg=238 guifg=Brown
 "hi LineNr term=underline ctermfg=Brown guifg=Brown
@@ -48,8 +51,8 @@ hi Cursor guibg=fg guifg=bg
 hi PreProc    term=underline cterm=NONE ctermfg=80  gui=NONE guifg=magenta3
 "hi PreProc    term=underline cterm=NONE ctermfg=darkmagenta  gui=NONE guifg=magenta3
 hi Identifier term=underline cterm=NONE ctermfg=darkcyan     gui=NONE guifg=cyan4
-hi Comment    term=NONE      cterm=NONE ctermfg=238      gui=NONE guifg=red2
-"hi Comment    term=NONE      cterm=NONE ctermfg=darkred      gui=NONE guifg=red2
+"hi Comment    term=NONE      cterm=NONE ctermfg=238      gui=NONE guifg=237
+hi Comment    term=NONE      cterm=NONE ctermfg=darkred      gui=NONE guifg=gray
 hi Constant   term=underline cterm=NONE ctermfg=Brown    gui=NONE guifg=green3
 "hi Constant   term=underline cterm=NONE ctermfg=darkgreen    gui=NONE guifg=green3
 hi Special    term=bold      cterm=NONE ctermfg=238     gui=NONE guifg=deeppink
@@ -58,6 +61,9 @@ hi Statement  term=bold      cterm=NONE ctermfg=blue         gui=bold guifg=blue
 "hi Statement  term=bold      cterm=bold ctermfg=blue         gui=bold guifg=blue
 "hi Type	      term=underline cterm=NONE ctermfg=80         gui=bold guifg=blue 
 hi Type	      term=underline cterm=bold ctermfg=blue         gui=bold guifg=blue 
+hi clear CursorLineNR
+hi clear CursorLine
+hi CursorLine guibg=lightgray cterm=underline
 
 if exists("syntax_on")
   let syntax_cmd = "enable"
